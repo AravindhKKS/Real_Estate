@@ -1,0 +1,32 @@
+@import '../../responsive.scss';
+
+.layout{
+    height: 100vh;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    
+
+    @include disktop{
+        // background-color:rgb(241, 135, 135);
+        max-width: 1280px;
+    }
+    @include laptop {
+        // background-color:rgb(238, 238, 144);
+        max-width: 768px;
+    }
+    @include mobile{
+        // background-color:rgb(158, 158, 244);
+        max-width: 640px;
+    }
+.content{
+        // background-color:blueviolet;
+    // flex: 1;
+    height: calc(100% - 100px);
+ 
+}
+}

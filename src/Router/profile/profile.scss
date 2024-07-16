@@ -1,0 +1,82 @@
+@import "../../responsive.scss";
+.profile{
+    display: flex;
+    height: 100%;
+
+    @include laptop{
+        flex-direction: column;
+        overflow-y:scroll
+    }
+
+    .userDetails{
+        flex: 3;
+        overflow-y: scroll;
+        padding-bottom: 50px;
+
+        @include laptop{
+            flex: none;
+            height: max-content;
+        overflow: hidden;
+        }
+
+        .wrapper{
+            margin-right: 50px;
+
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+               margin:  20px 0px;
+
+            h1{
+                    font-weight:300;
+                    font-family: Courier;
+                }
+
+                button{
+                    padding: 12px 24px;
+                    background-color: #fece51;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+
+            .userinfo{
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                flex-direction: column;
+
+                span{
+                    display: flex;
+                    align-items: center;
+                    gap:15px;
+
+                    .img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .userChat{  
+        flex: 2;
+        height: 100%;
+        background-color: #fcf5f3;
+
+       
+        @include laptop{
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper{
+            padding: 0px 20px;
+            height: 100%;
+        }
+    }
+}

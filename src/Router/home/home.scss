@@ -1,0 +1,72 @@
+@import '../../responsive.scss';
+
+.home{
+    display: flex;
+    .textContainer{
+        flex: 3;
+        .wrapper{
+            padding-right: 100px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+           
+            @include mobile{
+                padding: 10px;
+                justify-content: start;
+            }
+            
+            .title{
+                font-size: 64px; 
+
+                @include disktop{
+                    font-size: 48px;
+                }
+            }
+            .boxes{
+                display: flex;
+                justify-content: space-between;
+
+                @include mobile{
+                    display: none;
+                }
+                
+                h1{
+                    font-size: 36px;
+                    
+                    @include disktop{
+                        font-size: 32px;
+                    }
+                }
+
+                h2{
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .imgContainer{
+        flex: 2;
+        background-color: #fcf5f3;
+        height: 100vh;
+        display: flex;
+        align-items:center;
+        position: relative;
+        
+        @include laptop{
+            display: none;
+        }
+        img{
+            width: 115%;
+            position: absolute;
+            right: 0;
+
+            @include disktop{
+                width: 105%;
+            }
+        }
+
+    }
+}
